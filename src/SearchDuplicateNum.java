@@ -3,7 +3,6 @@ import java.util.ArrayList;
 /**
  * Created by sujunfei on 2017/8/23.
  * 寻找制定范围内的重复数字
- * 空间复杂度O(1)，时间复杂度为O(n)
  */
 public class SearchDuplicateNum {
     private int upperBound;
@@ -20,7 +19,11 @@ public class SearchDuplicateNum {
         upperBound = upperBoundNum;
     }
 
-    // 查找重复元素
+    /**
+     * 查找重复元素
+     * 空间复杂度O(1)，时间复杂度为O(n)
+     * 会修改原数组
+     */
     public ArrayList<Integer> search(int[] arr) {
         int arrLen = arr.length;
         ArrayList<Integer> duplicatedNums = new ArrayList<>();
@@ -52,7 +55,7 @@ public class SearchDuplicateNum {
         return duplicatedNums;
     }
 
-    //
+    // 打印重复数
     public void consoleDuplicateNum(ArrayList<Integer> duplicateNums) {
         int duplicateNumsSize = duplicateNums.size();
         if (duplicateNumsSize == 0) {
