@@ -33,9 +33,9 @@ public class SearchDuplicateNum {
 
         // 检查有没有不在规定范围内的数据
         for (int i = 0; i < arrLen; i++) {
-            if (arr[i] < lowerBound || arr[i] > upperBound) {
+            if (arr[i] < lowerBound || arr[i] > arrLen - 1) {
                 System.out.println(arr[i] + " is not in " + lowerBound + "~" + upperBound);
-                return null;
+                return duplicatedNums;
             }
         }
 
