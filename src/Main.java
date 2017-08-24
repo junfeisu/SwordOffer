@@ -13,9 +13,26 @@ public class Main {
         /**
          * 在升序二维数组查找数是否存在
          */
-        int[][] arr = {{1, 2, 8, 9}, {2, 4, 9, 12}, {4, 7, 10, 13}, {6, 8, 11, 15}};
-        SearchInTwoDimensionalArray test = new SearchInTwoDimensionalArray();
-        boolean result = test.search(arr, 4, 4, 6);
-        System.out.print("result is " + result);
+//        int[][] arr = {{1, 2, 8, 9}, {2, 4, 9, 12}, {4, 7, 10, 13}, {6, 8, 11, 15}};
+//        SearchInTwoDimensionalArray test = new SearchInTwoDimensionalArray();
+//        boolean result = test.search(arr, 4, 4, 6);
+//        System.out.print("result is " + result);
+
+        /**
+         * 递归实现反序打印单链表
+         */
+        PrintListReverse test = new PrintListReverse();
+        ListNode head = new ListNode(1);
+        ListNode curr = null;
+        for (int i = 2; i < 6; i++) {
+            ListNode temp = new ListNode(i);
+            if (i == 2) {
+                head.next = temp;
+            } else {
+                curr.next = temp;
+            }
+            curr = temp;
+        }
+        test.recursively(head);
     }
 }
