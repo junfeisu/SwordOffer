@@ -39,15 +39,22 @@ public class Main {
          */
 //        int[] preNums = {1, 2, 4, 7, 3, 5, 6, 8};
 //        int[] inNums = {4, 7, 2, 1, 5, 3, 8, 6};
-        int[] preNums = {1};
-        int[] inNums = {4};
-        BuildBinaryTree test = new BuildBinaryTree(preNums, inNums);
-        BinaryTreeNode root = null;
-        root = test.build(root);
-        System.out.print("中序遍历是：");
-        test.consoleBinaryTreeInorder(root);
-        System.out.println();
-        System.out.print("前序遍历是：");
-        test.consoleBinaryTreePreOrder(root);
+//        int[] preNums = {1, 2, 4, 7};
+//        int[] inNums = {4, 7, 2, 1};
+//        BuildBinaryTree test = new BuildBinaryTree(preNums, inNums);
+//        BinaryTreeNode root = null;
+//        root = test.build(root);
+//        System.out.print("中序遍历是：");
+//        test.consoleBinaryTreeInorder(root);
+//        System.out.println();
+//        System.out.print("前序遍历是：");
+//        test.consoleBinaryTreePreOrder(root);
+
+        /**
+         * 测试旋转数组的最小值
+         */
+        SearchMinInSubOrder test = new SearchMinInSubOrder();
+        int[] arr = {3, 5, 7, 1, 2, 3};
+        System.out.print("最小值是：" + test.min(arr));
     }
 }
