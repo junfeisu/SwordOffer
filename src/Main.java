@@ -53,8 +53,24 @@ public class Main {
         /**
          * 测试旋转数组的最小值
          */
-        SearchMinInSubOrder test = new SearchMinInSubOrder();
-        int[] arr = {3, 5, 7, 1, 2, 3};
-        System.out.print("最小值是：" + test.min(arr));
+//        SearchMinInSubOrder test = new SearchMinInSubOrder();
+//        int[] arr = {3, 5, 7, 1, 2, 3};
+//        System.out.print("最小值是：" + test.min(arr));
+
+        /**
+         * 测试矩阵中查找是否有某个字符串的路径
+         */
+//        String[][] martix = {{"t", "e", "s", "t"}, {"1", "s", "a", "t"}};
+//        SearchStrInMatrix test = new SearchStrInMatrix(martix);
+//        String str = "test";
+//        System.out.println("是否有路径: " + test.hasStr(str));
+
+        /**
+         * 测试机器人可移动的位置数
+         */
+//        int[][] martix = {{1, 2, 3, 4, 5, 6, 7, 8, 9}, {1, 2, 3, 4, 5, 6, 7, 8, 9}, {1, 2, 3, 4, 5, 6, 7, 8, 9}, {1, 2, 3, 4, 5, 6, 7, 8, 9}};
+        int[][] martix= {{}};
+        RobotMoving test = new RobotMoving(martix);
+        System.out.println("可移动的位置有" + test.moveAbleBoxNum(6) + "个");
     }
 }
