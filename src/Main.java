@@ -69,8 +69,15 @@ public class Main {
          * 测试机器人可移动的位置数
          */
 //        int[][] martix = {{1, 2, 3, 4, 5, 6, 7, 8, 9}, {1, 2, 3, 4, 5, 6, 7, 8, 9}, {1, 2, 3, 4, 5, 6, 7, 8, 9}, {1, 2, 3, 4, 5, 6, 7, 8, 9}};
-        int[][] martix= {{}};
-        RobotMoving test = new RobotMoving(martix);
-        System.out.println("可移动的位置有" + test.moveAbleBoxNum(6) + "个");
+//        int[][] martix= {{}};
+//        RobotMoving test = new RobotMoving(martix);
+//        System.out.println("可移动的位置有" + test.moveAbleBoxNum(6) + "个");
+
+        /**
+         * 测试剪绳子
+         */
+        CutRope test = new CutRope();
+        System.out.println(test.cutWithGreed(14));
+        System.out.println(test.cut(7));
     }
 }
