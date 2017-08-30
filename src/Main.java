@@ -76,8 +76,28 @@ public class Main {
         /**
          * 测试剪绳子
          */
-        CutRope test = new CutRope();
-        System.out.println(test.cutWithGreed(14));
-        System.out.println(test.cut(7));
+//        CutRope test = new CutRope();
+//        System.out.println(test.cutWithGreed(14));
+//        System.out.println(test.cut(7));
+
+        /**
+         * 测试删除单链表指定节点，时间复杂度为O(1)
+         */
+        DeletePointedNode test = new DeletePointedNode();
+        ListNode head = new ListNode(0);
+        ListNode curr = null;
+        for (int i = 1; i < 4; i++) {
+            ListNode temp = new ListNode(i);
+            if (head.next == null) {
+                head.next = temp;
+            } else {
+                curr.next = temp;
+            }
+            curr = temp;
+        }
+        ListNode last = new ListNode(4);
+        curr.next = last;
+        ListNode pointedNode = curr;
+        test.consoleSingleList(test.deleteNode(head, pointedNode));
     }
 }
