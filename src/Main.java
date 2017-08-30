@@ -83,8 +83,30 @@ public class Main {
         /**
          * 测试删除单链表指定节点，时间复杂度为O(1)
          */
-        DeletePointedNode test = new DeletePointedNode();
-        ListNode head = new ListNode(0);
+//        DeletePointedNode test = new DeletePointedNode();
+//        ListNode head = new ListNode(0);
+//        ListNode curr = null;
+//        for (int i = 1; i < 4; i++) {
+//            ListNode temp = new ListNode(i);
+//            if (head.next == null) {
+//                head.next = temp;
+//            } else {
+//                curr.next = temp;
+//            }
+//            curr = temp;
+//        }
+//        ListNode last = new ListNode(4);
+//        curr.next = last;
+//        ListNode pointedNode = curr;
+//        test.consoleSingleList(test.deleteNode(head, pointedNode));
+
+        /**
+         * 测试删除重复节点
+         */
+        DeleteDuplicateNode test = new DeleteDuplicateNode();
+        ListNode nullHead = null;
+        ListNode singleHead = new ListNode(1);
+        ListNode head = new ListNode(2);
         ListNode curr = null;
         for (int i = 1; i < 4; i++) {
             ListNode temp = new ListNode(i);
@@ -95,9 +117,8 @@ public class Main {
             }
             curr = temp;
         }
-        ListNode last = new ListNode(4);
-        curr.next = last;
-        ListNode pointedNode = curr;
-        test.consoleSingleList(test.deleteNode(head, pointedNode));
+        test.consoleSingleList(test.delete(nullHead));
+        test.consoleSingleList(test.delete(singleHead));
+        test.consoleSingleList(test.delete(head));
     }
 }
